@@ -1,13 +1,14 @@
 from ariadne.asgi import GraphQL
-from ariadne import (QueryType,
+from ariadne import (QueryType, load_schema_from_path,
                      make_executable_schema)
-from _utils.typeDefs import type_defs
+from api._utils.member import member
 
+type_defs = load_schema_from_path("api/_utils/typeDefs.graphql")
 query = QueryType()
 
 
 @query.field("hello")
-def resolve_hello(*_, name):
+def resolve_hello(*_, name: str):
     return f"Hello, {name}!!"
 
 
@@ -18,16 +19,7 @@ def resolve_goodbye(*_):
 
 @query.field("members")
 def resolve_members(*_):
-    return [
-        {
-            "name": "shimahi",
-            "part": "guitar"
-        },
-        {
-            "name": "mochi",
-            "part": "vocal"
-        }
-    ]
+    return member
 
 
 schema = make_executable_schema(type_defs, query)
