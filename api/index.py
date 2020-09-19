@@ -1,12 +1,8 @@
-from flask import Flask
-
-app = Flask(__name__)
+from sanic import Sanic
+from sanic.response import json
+app = Sanic()
 
 
 @app.route('/')
-def index():
-    return 'Hello World'
-
-
-if __name__ == '__main__':
-    app.run(host='localhost', port=8080)
+async def index(request, path=""):
+    return json({'hello': path})
