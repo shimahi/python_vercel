@@ -8,7 +8,7 @@ $ vercel dev
 
 uvicornでのサーバ起動
 ```
-$ poetry run api.index:app --reload --host 0.0.0.0 --port 4000
+$ poetry run uvicorn api.index:app --reload --host 0.0.0.0 --port 4000
 ```
 
 
