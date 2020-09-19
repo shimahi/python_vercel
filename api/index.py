@@ -1,7 +1,7 @@
 from ariadne.asgi import GraphQL
 from ariadne import (QueryType,
                      make_executable_schema)
-from _utils.typeDefs import type_defs
+from ._utils.typeDefs import type_defs
 
 query = QueryType()
 
