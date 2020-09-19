@@ -5,7 +5,7 @@
     "api/index.py": {
       "memory": 1024,
       "maxDuration": 10,
-      "includeFiles": "api/typeDefs.py"
+      "includeFiles": "api/_utils.py"
     }
   },
   "routes": [{ "src": "/", "dest": "api/index.py" }]
