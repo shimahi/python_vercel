@@ -1,21 +1,8 @@
 from ariadne.asgi import GraphQL
-from ariadne import (QueryType, gql,
+from ariadne import (QueryType,
                      make_executable_schema)
+from typeDefs import type_defs
 
-
-type_defs = gql("""
-type Query {
-  hello(name: String = "いぬ"): String!
-  goodbye: String!
-  members: [Member!]!
-}
-
-type Member {
-  name: String!
-  part: String!
-}
-
-""")
 query = QueryType()
 
 
