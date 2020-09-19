@@ -4,12 +4,11 @@
 Python `3.8.5`
 Poetry `1.0.10`
 
-Vercelでのサーバ起動
+
+### Vercelでのサーバ起動
 ```
 $ vercel dev
 ```
-
-
 ### uvicornでのサーバ起動
 **vercel.jsonのあるディレクトリから** api/index.pyを指定してuvicornを起動すること
 ```
