@@ -1,4 +1,6 @@
-# inu
+# python on vercel
+
+Vercelのserverless function上でArdiadneを使ったGraphQLサーバーを作る
 
 動作環境
 Python `3.8.5`
