@@ -1,0 +1,14 @@
+{
+  "name": "python_vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:shimahi/python_vercel.git",
+  "author": "shimahi <shimahi@rear.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/python": "^1.2.3"
+  },
+  "devDependencies": {
+    "vercel": "^20.1.0"
+  }
+}
